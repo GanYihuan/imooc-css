@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>?</title>
   <style>
     .container {
       background: red;
@@ -13,6 +13,7 @@
       margin: 20px;
     }
 
+    /* float产生BFC(形成块), 导致span能被布局 */
     .p1 {
       background: green;
       float: left;
@@ -20,8 +21,12 @@
       height: 50px;
     }
 
+    /* 清除浮动方式 */
     .container2::after {
-      content: 'aaa';
+      /* 解决float导致的父级塌陷 */
+      /* overflow: auto/hidden; */
+      content: ' ';
+      /* 保证左右两边都没有浮动元素 */
       clear: both;
       display: block;
       visibility: hidden;
@@ -49,7 +54,11 @@
       float
     </span>
   </div>
+
   <div class="container" style="height:200px;background:blue;">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
   </div>
 </body>
 
