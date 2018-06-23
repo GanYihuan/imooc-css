@@ -8,6 +8,7 @@
   <title>fonts</title>
   <style>
     body {
+      /* fallback机制 */
       /* font-family: "monaco"; */
       /* font-family: "monaco", "PingFang SC"; */
       font-family: "aaaaa", "monaco", "PingFang SC";
@@ -16,7 +17,6 @@
     .chinese {
       font-family: "PingFang SC", "Microsoft Yahei", monospace;
       /* font-family: "Microsoft Yahei", serif; */
-      /* font-family: "serif"; */
     }
 
     .weight {
@@ -25,8 +25,15 @@
       font-weight: lighter;
       font-weight: normal;
       font-weight: 100;
+      /* 斜体 */
+      font-style: italic;
+      /* 下划线 */
+      text-decoration: none;
+      /* 指针 */
+      cursor: pointer;
     }
 
+    /* 自定义字体 */
     @font-face {
       font-family: "IF";
       src: url("./IndieFlower.ttf");

@@ -5,38 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>basic</title>
+  <title>权重</title>
   <style>
-    #test1 {
+    .test1 {
       color: red;
     }
 
-    #test1.test1 {
+    .test1 {
       color: blue;
     }
 
     .test2 {
-      color: red;
+      color: red !important;
     }
 
-    div.test2 {
+    .test2 {
       color: blue;
     }
 
     #test3 {
       color: red;
     }
-
-    .c1.c2.c3.c4.c5.c6.c7.c8.c9.c10.c11 {
-      color: blue;
-    }
   </style>
 </head>
 
 <body class="body" id="body">
-  <div id="test1" class="test1">test1</div>
+  <div class="test1">test1</div>
   <div class="test2">test2</div>
-  <div id="test3" class="c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11">
+  <div id="test3" style="color:blue">
     test3
   </div>
 </body>

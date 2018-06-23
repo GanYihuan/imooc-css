@@ -21,11 +21,18 @@
     #body {
       background: blue;
     }
+
+    /* 浏览器怎么解析css */
+    /* 从右往左解析 */
+    .body div .hello {
+      color: #f00
+    }
   </style>
 </head>
 
 <body class="body" id="body">
   Hello CSS!
+  <div><a class="hello"></a></div>
 </body>
 
 </html>
