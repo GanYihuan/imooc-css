@@ -1,42 +1,40 @@
-
 @fontSize: 12px;
 @bgColor: red;
 
-.box{
-    color:green;
+.box {
+	color: green;
 }
 
-.box1{
-    .box();
-    line-height: 2em;
+.box1 {
+	.box();
+	line-height: 2em;
 }
-.box2{
-    .box();
-    line-height: 3em;
-}
-
-.block(@fontSize){
-    font-size: @fontSize;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.box2 {
+	.box();
+	line-height: 3em;
 }
 
-
-body{
-    padding:0;
-    margin:0;
+.block(@fontSize) {
+	font-size: @fontSize;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
-.wrapper{
-    background:lighten(@bgColor, 40%);
+body {
+	padding: 0;
+	margin: 0;
+}
 
-    .nav{
-        .block(@fontSize);
-    }
-    .content{
-        .block(@fontSize + 2px);
-        &:hover{
-            background:red;
-        }
-    }
+.wrapper {
+	background: lighten(@bgColor, 40%);
+
+	.nav {
+		.block(@fontSize);
+	}
+	.content {
+		.block(@fontSize + 2px);
+		&:hover {
+			background: red;
+		}
+	}
 }
