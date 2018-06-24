@@ -1,0 +1,5 @@
+﻿@import './01-postcss.css';
+
+.title {
+  box-shadow: 0 0 3px rgba(255, 255, 255, .3);
+}
