@@ -4,11 +4,12 @@ const autoprefixer = require('autoprefixer');
 const atImport = require('postcss-import')
 // 压缩代码
 const cssnano = require('cssnano');
-// 
-const cssnext = require('cssnext');
+// 类似 ES6 的 Babel(实现 ES6 到 ES5 的代码转换 )
+const cssnext = require('postcss-cssnext');
 
 module.exports = {
   plugins: [
+    cssnext,
     atImport,
     autoprefixer({
       // browsers: ['> 1%']
