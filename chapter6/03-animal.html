@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>关键帧动画</title>
   <style>
     .container {
       width: 100px;
@@ -13,6 +13,8 @@
       border: 1px solid red;
       background: url(./animal.png) no-repeat;
       animation: run 1s infinite;
+      /* steps: 关键帧之间要有几个画面 */
+      /* 去掉补间 */
       animation-timing-function: steps(1);
     }
 
