@@ -8,12 +8,13 @@
   <title>Document</title>
   <style>
     div {
-      background: red;
       width: 100px;
       height: 100px;
+      background: red;
     }
 
     .p2 {
+      /* 偏移相对于本身, 不改变占据空间 */
       position: relative;
       left: 10px;
       top: -10px;
@@ -21,7 +22,7 @@
     }
 
     .p3 {
-      /* 脱离文档流 */
+      /* 脱离文档流, 相对于最近的relative,absolute布局, 对其他元素不造成影响 */
       position: absolute;
       left: 80px;
       top: 30px;
@@ -29,7 +30,7 @@
     }
 
     .p4 {
-      /* 脱离文档流 */
+      /* 脱离文档流, 相对于可视区域 */
       position: fixed;
       left: 0;
       bottom: 10px;

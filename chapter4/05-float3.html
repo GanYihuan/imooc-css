@@ -13,19 +13,19 @@
     }
 
     .left {
-      background: red;
       float: left;
-      height: 100%;
-      width: 200px;
       /* position: absolute; */
       /* height: 200 px; */
+      width: 200px;
+      height: 100%;
+      background: red;
     }
 
     .right {
-      background: blue;
       float: right;
       width: 200px;
       height: 100%;
+      background: blue;
     }
 
     .middle {
@@ -39,15 +39,10 @@
 
 <body>
   <div class="container">
-    <div class="left">
-      左
-    </div>
-    <div class="right">
-      右
-    </div>
-    <div class="middle">
-      中间(顺序注意)
-    </div>
+    <div class="left">左</div>
+    <!-- 右边的元素挪前 -->
+    <div class="right">右</div>
+    <div class="middle">中间(顺序注意)</div>
   </div>
 </body>
 

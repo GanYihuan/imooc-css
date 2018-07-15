@@ -5,32 +5,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>?</title>
+  <title>float</title>
   <style>
     .container {
       background: red;
       width: 400px;
       margin: 20px;
     }
-
-    /* float产生BFC(形成块), 导致span能被布局 */
+    
+    /* float 脱离文档流，不脱离文字流 */
+    /* float 产生BFC(形成块), 导致span能被布局 */
+    /* 尽量靠上尽量靠左 */
+    /* 对兄弟的影响: */
+    /* 1. 上面贴非float元素 */
+    /* 2. 旁边贴float元素 */
+    /* 3. 不影响其它块级元素位置 */
+    /* 4. 影响其它块级元素内部文本 */
+    /* 对父级的影响: */
+    /* 1. 从布局上消失 */
+    /* 2. 高度塌陷 */
     .p1 {
-      background: green;
       float: left;
       width: 200px;
       height: 50px;
+      background: green;
     }
 
     /* 清除浮动方式 */
     .container2::after {
+      display: block;
+      visibility: hidden;
+      height: 0;
       /* 解决float导致的父级塌陷 */
       /* overflow: auto/hidden; */
       content: ' ';
       /* 保证左右两边都没有浮动元素 */
       clear: both;
-      display: block;
-      visibility: hidden;
-      height: 0;
     }
   </style>
 </head>
