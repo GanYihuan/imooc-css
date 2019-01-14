@@ -10,27 +10,24 @@
       #test1 {
         color: red;
       }
-      /* 110 */
-      #test1.test1 {
-        color: blue;
-      }
       /* 10 */
       .test2 {
         color: red;
       }
-      /* 11 */
-      div.test2 {
+      /* 1 */
+      div {
         color: blue;
       }
-      /* 100 */
       /* 权重不进位 */
-      #test3 {
-        color: red;
-      }
       /* 110 = 010 */
       .c1.c2.c3.c4.c5.c6.c7.c8.c9.c10.c11 {
         color: blue;
       }
+      /*
+      !import 优先级最高
+      元素属性 优先级高
+      相同权重 后面的高
+      */
     </style>
   </head>
   <body class="body" id="body">
