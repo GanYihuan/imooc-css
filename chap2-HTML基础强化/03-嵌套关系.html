@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>default style</title>
-</head>
-<body>
-  <div>
-    <a href="#">DIV &gt; A</a>
-  </div>
-  <!-- a > div 合法 -->
-  <a href="#">
-    <div>A &gt; DIV</div>
-  </a>
-  <!-- p > div 不合法 -->
-  <p>
-    <a href="#">
-      <div>P &gt; A &gt; DIV</div>
-    </a>
-  </p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>default style</title>
+  </head>
+  <body>
+    <div><a href="#">DIV &gt; A</a></div>
+    <!-- a > div 合法 -->
+    <a href="#"> <div>A &gt; DIV</div> </a>
+    <!-- p > div 不合法 -->
+    <p>
+      <a href="#"> <div>P &gt; A &gt; DIV</div> </a>
+    </p>
+  </body>
 </html>
