@@ -1,21 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>float三栏布局布局(不常用absolute)</title>
+    <title>float三栏布局布局</title>
     <style>
       .container {
         width: 800px;
         height: 200px;
       }
       .left {
-        position: absolute;
-        /* float:left; */
-        /* height:100%; */
-        width: 200px;
-        height: 200px;
+        float: left;
+        width: 100px;
+        height: 100%;
         background: red;
       }
       .right {
@@ -26,9 +24,11 @@
       }
       .middle {
         /* .left.width */
-        margin-left: 200px;
+        margin-left: 100px;
         /* .right.width */
         margin-right: 200px;
+        height: 100%;
+        background: #0f0;
       }
     </style>
   </head>
@@ -36,6 +36,7 @@
     <div class="container">
       <!-- 左右中 -->
       <div class="left">左</div>
+      <!-- 右边的元素挪前 -->
       <div class="right">右</div>
       <div class="middle">中间(顺序注意)</div>
     </div>
